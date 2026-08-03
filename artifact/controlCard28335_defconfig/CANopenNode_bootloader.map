@@ -1,10 +1,10 @@
 ******************************************************************************
-             TMS320C2000 Linker Unix v22.6.0                   
+             TMS320C2000 Linker Unix v25.11.1                  
 ******************************************************************************
->> Linked Wed Jul 29 16:47:39 2026
+>> Linked Tue Aug  4 00:19:35 2026
 
 OUTPUT FILE NAME:   <CANopenNode_bootloader.out>
-ENTRY POINT SYMBOL: "_c_int00"  address: 0033c297
+ENTRY POINT SYMBOL: "_c_int00"  address: 0033c2dd
 
 
 MEMORY CONFIGURATION
@@ -16,7 +16,7 @@ PAGE 0:
   APP_FLASH             00300000   00037f7e  00000000  00037f7e  RWIX
   APP_BEGIN             00337f7e   00000002  00000000  00000002  RWIX
   APP_CRC               00337f80   00000080  00000000  00000080  RWIX
-  BOOT_FLASH            00338000   00007f80  0000554c  00002a34  RWIX
+  BOOT_FLASH            00338000   00007f80  000055e1  0000299f  RWIX
   CSM_RSVD              0033ff80   00000076  00000000  00000076  RWIX
   BOOT_BEGIN            0033fff6   00000002  00000002  00000000  RWIX
   CSM_PWL               0033fff8   00000008  00000000  00000008  RWIX
@@ -91,153 +91,152 @@ SECTION ALLOCATION MAP
  output                                  attributes/
 section   page    origin      length       input sections
 --------  ----  ----------  ----------   ----------------
-.cinit     0    0033d3f6    00000157     
-                  0033d3f6    0000006b     OD.obj (.cinit:_ODList)
-                  0033d461    00000037     OD.obj (.cinit)
-                  0033d498    00000026     rts2800_fpu32.lib : defs.c.obj (.cinit:__ftable)
-                  0033d4be    0000001b                       : host_device.c.obj (.cinit:__device)
-                  0033d4d9    00000017     bootloader.obj (.cinit)
-                  0033d4f0    00000012     CO_Prog_F28335.obj (.cinit)
-                  0033d502    0000000e     rts2800_fpu32.lib : host_device.c.obj (.cinit:__stream)
-                  0033d510    0000000e                       : exit.c.obj (.cinit)
-                  0033d51e    0000000a     Flash28335_API_V210.lib : Flash28_Globals.obj (.cinit)
-                  0033d528    00000005     rts2800_fpu32.lib : _lock.c.obj (.cinit:__lock)
-                  0033d52d    00000005                       : _lock.c.obj (.cinit:__unlock)
-                  0033d532    00000005     crc.obj (.cinit:_crc_table)
-                  0033d537    00000004     rts2800_fpu32.lib : defs.c.obj (.cinit)
-                  0033d53b    00000004                       : errno.c.obj (.cinit)
-                  0033d53f    00000004                       : fopen.c.obj (.cinit)
-                  0033d543    00000004                       : memory.c.obj (.cinit)
-                  0033d547    00000004                       : open.c.obj (.cinit)
-                  0033d54b    00000002     --HOLE-- [fill = 0]
+.cinit     0    0033d43a    000001a7     
+                  0033d43a    0000007a     rts2800_fpu32.lib : defs.c.obj (.cinit:__ftable)
+                  0033d4b4    0000006b     OD.obj (.cinit:_ODList)
+                  0033d51f    00000037     OD.obj (.cinit)
+                  0033d556    0000001b     rts2800_fpu32.lib : host_device.c.obj (.cinit:__device)
+                  0033d571    00000017     bootloader.obj (.cinit)
+                  0033d588    00000012     CO_Prog_F28335.obj (.cinit)
+                  0033d59a    0000000e     rts2800_fpu32.lib : host_device.c.obj (.cinit:__stream)
+                  0033d5a8    0000000e                       : exit.c.obj (.cinit)
+                  0033d5b6    0000000a     Flash28335_API_V210.lib : Flash28_Globals.obj (.cinit)
+                  0033d5c0    00000005     rts2800_fpu32.lib : _lock.c.obj (.cinit:__lock)
+                  0033d5c5    00000005                       : _lock.c.obj (.cinit:__unlock)
+                  0033d5ca    00000005     crc.obj (.cinit:_crc_table)
+                  0033d5cf    00000004     rts2800_fpu32.lib : defs.c.obj (.cinit)
+                  0033d5d3    00000004                       : errno.c.obj (.cinit)
+                  0033d5d7    00000004                       : memory.c.obj (.cinit)
+                  0033d5db    00000004                       : open.c.obj (.cinit)
+                  0033d5df    00000002     --HOLE-- [fill = 0]
 
 .pinit     0    00338000    00000000     UNINITIALIZED
 
-.text      0    00338000    000048d3     
+.text      0    00338000    00004918     
                   00338000    00000fca     CO_SDOserver.obj (.text)
                   00338fca    000006d0     rts2800_fpu32.lib : _printfi.c.obj (.text)
-                  0033969a    000005f5                       : _printfi.c.obj (.text:__TI_printfi)
-                  00339c8f    000005e2     CO_driver.obj (.text)
-                  0033a271    000003b3     CO_Emergency.obj (.text)
-                  0033a624    00000309     CANopen.obj (.text)
-                  0033a92d    000002cc     CO_Prog_F28335.obj (.text)
-                  0033abf9    000002ba     CO_LSSslave.obj (.text)
-                  0033aeb3    0000028c     rts2800_fpu32.lib : memory.c.obj (.text)
-                  0033b13f    00000262     CO_ODinterface.obj (.text)
-                  0033b3a1    0000020a     CO_NMT_Heartbeat.obj (.text)
-                  0033b5ab    00000207     bootloader.obj (.text)
-                  0033b7b2    00000121     rts2800_fpu32.lib : fopen.c.obj (.text)
-                  0033b8d3    00000117     CO_LEDs.obj (.text)
-                  0033b9ea    00000107     rts2800_fpu32.lib : ll_div28.asm.obj (.text)
-                  0033baf1    000000d0     crc.obj (.text)
-                  0033bbc1    000000a9     rts2800_fpu32.lib : s_scalbn.c.obj (.text)
-                  0033bc6a    000000a8                       : fputs.c.obj (.text)
-                  0033bd12    0000009c                       : fd_add28.asm.obj (.text)
-                  0033bdae    00000095                       : trgmsg.c.obj (.text)
-                  0033be43    0000008b                       : fd_div28.asm.obj (.text)
-                  0033bece    00000083                       : fd_mpy28.asm.obj (.text)
-                  0033bf51    0000007c                       : setvbuf.c.obj (.text)
-                  0033bfcd    00000073                       : fflush.c.obj (.text)
-                  0033c040    00000071                       : open.c.obj (.text)
-                  0033c0b1    0000006f     CO_Prog.obj (.text)
-                  0033c120    00000065     rts2800_fpu32.lib : _io_perm.c.obj (.text)
-                  0033c185    0000005d                       : fclose.c.obj (.text)
-                  0033c1e2    0000005b                       : hostlseek.c.obj (.text)
-                  0033c23d    0000005a                       : s_frexp.c.obj (.text)
-                  0033c297    00000056                       : boot28.asm.obj (.text)
-                  0033c2ed    00000053                       : fputc.c.obj (.text)
-                  0033c340    00000051                       : getdevice.c.obj (.text)
-                  0033c391    0000003e                       : hostrename.c.obj (.text)
-                  0033c3cf    0000003d                       : fseek.c.obj (.text)
-                  0033c40c    00000038                       : hostopen.c.obj (.text)
-                  0033c444    00000037                       : hostwrite.c.obj (.text)
-                  0033c47b    00000036                       : hostread.c.obj (.text)
-                  0033c4b1    00000033     crc16-ccitt.obj (.text)
-                  0033c4e4    00000033     rts2800_fpu32.lib : close.c.obj (.text)
-                  0033c517    00000031                       : atoi.c.obj (.text)
-                  0033c548    00000031                       : fprintf.c.obj (.text)
-                  0033c579    00000030                       : _ltoa.c.obj (.text)
-                  0033c5a9    0000002a                       : fd_cmp28.asm.obj (.text)
-                  0033c5d3    0000002a                       : l_div28.asm.obj (.text)
-                  0033c5fd    00000029                       : exit.c.obj (.text)
-                  0033c626    00000027                       : hostclose.c.obj (.text)
-                  0033c64d    00000024                       : cpy_tbl.c.obj (.text)
-                  0033c671    00000024                       : hostunlink.c.obj (.text)
-                  0033c695    00000024                       : s_copysign.c.obj (.text)
-                  0033c6b9    00000022                       : i_div28.asm.obj (.text)
-                  0033c6db    00000021                       : fd_toi28.asm.obj (.text)
-                  0033c6fc    00000021                       : memmov.c.obj (.text)
-                  0033c71d    0000001f                       : fd_tol28.asm.obj (.text)
-                  0033c73c    0000001e                       : ll_cmp28.asm.obj (.text)
-                  0033c75a    0000001d                       : i_tofd28.asm.obj (.text)
-                  0033c777    0000001d                       : memcpy.c.obj (.text)
-                  0033c794    0000001c                       : fs_tofdfpu32.asm.obj (.text)
-                  0033c7b0    0000001c                       : l_tofd28.asm.obj (.text)
-                  0033c7cc    00000019                       : unlink.c.obj (.text)
-                  0033c7e5    00000019                       : write.c.obj (.text)
-                  0033c7fe    00000018                       : ll_aox28.asm.obj (.text)
-                  0033c816    00000018                       : lseek.c.obj (.text)
-                  0033c82e    00000015                       : strncpy.c.obj (.text)
-                  0033c843    00000012                       : args_main.c.obj (.text)
-                  0033c855    00000010                       : memccpy.c.obj (.text)
-                  0033c865    0000000e                       : fd_sub28.asm.obj (.text)
-                  0033c873    0000000d                       : memchr.c.obj (.text)
-                  0033c880    0000000c                       : strchr.c.obj (.text)
-                  0033c88c    0000000a                       : strcmp.c.obj (.text)
-                  0033c896    00000009                       : _lock.c.obj (.text)
-                  0033c89f    00000009                       : fd_neg28.asm.obj (.text)
-                  0033c8a8    00000009                       : wcslen.c.obj (.text)
-                  0033c8b1    00000008     boot.obj (.text)
-                  0033c8b9    00000008     rts2800_fpu32.lib : strlen.c.obj (.text)
-                  0033c8c1    00000007                       : memset.c.obj (.text)
-                  0033c8c8    00000005                       : strcpy.c.obj (.text)
-                  0033c8cd    00000003                       : remove.c.obj (.text)
-                  0033c8d0    00000002                       : pre_init.c.obj (.text)
-                  0033c8d2    00000001                       : startup.c.obj (.text)
+                  0033969a    000005ef                       : _printfi.c.obj (.text:__TI_printfi)
+                  00339c89    000005e2     CO_driver.obj (.text)
+                  0033a26b    000003b3     CO_Emergency.obj (.text)
+                  0033a61e    00000309     CANopen.obj (.text)
+                  0033a927    000002cc     CO_Prog_F28335.obj (.text)
+                  0033abf3    000002ba     CO_LSSslave.obj (.text)
+                  0033aead    0000028c     rts2800_fpu32.lib : memory.c.obj (.text)
+                  0033b139    00000262     CO_ODinterface.obj (.text)
+                  0033b39b    0000020a     CO_NMT_Heartbeat.obj (.text)
+                  0033b5a5    00000207     bootloader.obj (.text)
+                  0033b7ac    0000016c     rts2800_fpu32.lib : fopen.c.obj (.text)
+                  0033b918    00000117     CO_LEDs.obj (.text)
+                  0033ba2f    00000107     rts2800_fpu32.lib : ll_div28.asm.obj (.text)
+                  0033bb36    000000d0     crc.obj (.text)
+                  0033bc06    000000a9     rts2800_fpu32.lib : s_scalbn.c.obj (.text)
+                  0033bcaf    000000a8                       : fputs.c.obj (.text)
+                  0033bd57    0000009c                       : fd_add28.asm.obj (.text)
+                  0033bdf3    00000001                       : startup.c.obj (.text)
+                  0033bdf4    00000095                       : trgmsg.c.obj (.text)
+                  0033be89    0000008b                       : fd_div28.asm.obj (.text)
+                  0033bf14    00000083                       : fd_mpy28.asm.obj (.text)
+                  0033bf97    0000007c                       : setvbuf.c.obj (.text)
+                  0033c013    00000073                       : fflush.c.obj (.text)
+                  0033c086    00000071                       : open.c.obj (.text)
+                  0033c0f7    0000006f     CO_Prog.obj (.text)
+                  0033c166    00000065     rts2800_fpu32.lib : _io_perm.c.obj (.text)
+                  0033c1cb    0000005d                       : fclose.c.obj (.text)
+                  0033c228    0000005b                       : hostlseek.c.obj (.text)
+                  0033c283    0000005a                       : s_frexp.c.obj (.text)
+                  0033c2dd    00000056                       : boot28.asm.obj (.text)
+                  0033c333    00000053                       : fputc.c.obj (.text)
+                  0033c386    0000004e                       : getdevice.c.obj (.text)
+                  0033c3d4    0000003e                       : hostrename.c.obj (.text)
+                  0033c412    0000003d                       : fseek.c.obj (.text)
+                  0033c44f    00000038                       : hostopen.c.obj (.text)
+                  0033c487    00000037                       : hostwrite.c.obj (.text)
+                  0033c4be    00000036                       : hostread.c.obj (.text)
+                  0033c4f4    00000033     crc16-ccitt.obj (.text)
+                  0033c527    00000033     rts2800_fpu32.lib : close.c.obj (.text)
+                  0033c55a    00000031                       : atoi.c.obj (.text)
+                  0033c58b    00000031                       : fprintf.c.obj (.text)
+                  0033c5bc    00000030                       : _ltoa.c.obj (.text)
+                  0033c5ec    0000002a                       : fd_cmp28.asm.obj (.text)
+                  0033c616    0000002a                       : l_div28.asm.obj (.text)
+                  0033c640    00000029                       : exit.c.obj (.text)
+                  0033c669    00000027                       : hostclose.c.obj (.text)
+                  0033c690    00000024                       : cpy_tbl.c.obj (.text)
+                  0033c6b4    00000024                       : hostunlink.c.obj (.text)
+                  0033c6d8    00000024                       : s_copysign.c.obj (.text)
+                  0033c6fc    00000022                       : i_div28.asm.obj (.text)
+                  0033c71e    00000021                       : fd_toi28.asm.obj (.text)
+                  0033c73f    00000021                       : memmov.c.obj (.text)
+                  0033c760    00000020                       : memcpy.c.obj (.text)
+                  0033c780    0000001f                       : fd_tol28.asm.obj (.text)
+                  0033c79f    0000001e                       : ll_cmp28.asm.obj (.text)
+                  0033c7bd    0000001d                       : i_tofd28.asm.obj (.text)
+                  0033c7da    0000001c                       : fs_tofdfpu32.asm.obj (.text)
+                  0033c7f6    0000001c                       : l_tofd28.asm.obj (.text)
+                  0033c812    00000019                       : unlink.c.obj (.text)
+                  0033c82b    00000019                       : write.c.obj (.text)
+                  0033c844    00000018                       : ll_aox28.asm.obj (.text)
+                  0033c85c    00000018                       : lseek.c.obj (.text)
+                  0033c874    00000015                       : strncpy.c.obj (.text)
+                  0033c889    00000012                       : args_main.c.obj (.text)
+                  0033c89b    00000010                       : memccpy.c.obj (.text)
+                  0033c8ab    0000000e                       : fd_sub28.asm.obj (.text)
+                  0033c8b9    0000000d                       : memchr.c.obj (.text)
+                  0033c8c6    0000000c                       : strchr.c.obj (.text)
+                  0033c8d2    0000000a                       : strcmp.c.obj (.text)
+                  0033c8dc    00000009                       : _lock.c.obj (.text)
+                  0033c8e5    00000009                       : fd_neg28.asm.obj (.text)
+                  0033c8ee    00000009                       : wcslen.c.obj (.text)
+                  0033c8f7    00000008     boot.obj (.text)
+                  0033c8ff    00000008     rts2800_fpu32.lib : strlen.c.obj (.text)
+                  0033c907    00000007                       : memset.c.obj (.text)
+                  0033c90e    00000005                       : strcpy.c.obj (.text)
+                  0033c913    00000003                       : remove.c.obj (.text)
+                  0033c916    00000002                       : pre_init.c.obj (.text)
 
-.econst    0    0033d096    00000360     
-                  0033d096    00000101     rts2800_fpu32.lib : ctype.c.obj (.econst:.string:__ctypes_)
-                  0033d197    00000100     crc16-ccitt.obj (.econst:_crc16_ccitt_table)
-                  0033d297    00000001     --HOLE-- [fill = 0]
-                  0033d298    00000074     OD.obj (.econst:_ODObjs)
-                  0033d30c    00000034     CO_ODinterface.obj (.econst:_abortCodes$1)
-                  0033d340    00000026     rts2800_fpu32.lib : _printfi.c.obj (.econst:.string)
-                  0033d366    0000001c                       : _printfi.c.obj (.econst)
-                  0033d382    0000001c                       : s_scalbn.c.obj (.econst)
-                  0033d39e    00000018     CO_driver.obj (.econst:_BTC_CONFIG_TABLE)
-                  0033d3b6    00000016     crc.obj (.econst:.string)
-                  0033d3cc    00000010     crc.obj (.econst:_crc_config)
-                  0033d3dc    0000000a     CO_LSSslave.obj (.econst:_CO_LSS_bitTimingTableLookup)
-                  0033d3e6    00000008     rts2800_fpu32.lib : s_frexp.c.obj (.econst)
-                  0033d3ee    00000004     CO_Prog_F28335.obj (.econst:_$P$T0$1)
-                  0033d3f2    00000002     rts2800_fpu32.lib : fputs.c.obj (.econst:.string)
-                  0033d3f4    00000002     CO_Prog_F28335.obj (.econst)
+.econst    0    0033d0da    00000360     
+                  0033d0da    00000101     rts2800_fpu32.lib : ctype.c.obj (.econst:.string:__ctypes_)
+                  0033d1db    00000100     crc16-ccitt.obj (.econst:_crc16_ccitt_table)
+                  0033d2db    00000001     --HOLE-- [fill = 0]
+                  0033d2dc    00000074     OD.obj (.econst:_ODObjs)
+                  0033d350    00000034     CO_ODinterface.obj (.econst:_abortCodes$1)
+                  0033d384    00000026     rts2800_fpu32.lib : _printfi.c.obj (.econst:.string)
+                  0033d3aa    0000001c                       : _printfi.c.obj (.econst)
+                  0033d3c6    0000001c                       : s_scalbn.c.obj (.econst)
+                  0033d3e2    00000018     CO_driver.obj (.econst:_BTC_CONFIG_TABLE)
+                  0033d3fa    00000016     crc.obj (.econst:.string)
+                  0033d410    00000010     crc.obj (.econst:_crc_config)
+                  0033d420    0000000a     CO_LSSslave.obj (.econst:_CO_LSS_bitTimingTableLookup)
+                  0033d42a    00000008     rts2800_fpu32.lib : s_frexp.c.obj (.econst)
+                  0033d432    00000004     CO_Prog_F28335.obj (.econst:_$P$T0$1)
+                  0033d436    00000002     rts2800_fpu32.lib : fputs.c.obj (.econst:.string)
+                  0033d438    00000002     CO_Prog_F28335.obj (.econst)
 
 boot_codestart 
 *          0    0033fff6    00000002     
                   0033fff6    00000002     boot.obj (boot_codestart)
 
-ramfuncs   0    0033c8d4    000007c2     RUN ADDR = 00008000
-                  0033c8d4    00000020     Flash28335_API_V210.lib : Flash28_Erase.obj (.econst:_Sector$1)
-                  0033c8f4    00000008                             : Flash28_Erase.obj (.econst:_SecKey$2)
-                  0033c8fc    000000aa                             : Flash28_Prog.obj (.text)
-                  0033c9a6    000000a0                             : Flash28_Erase.obj (.text)
-                  0033ca46    0000009a                             : Flash28_Erase_Pulse.obj (.text)
-                  0033cae0    00000084                             : Flash28_Internals.obj (.text)
-                  0033cb64    00000080                             : Flash28_Prog_Pulse.obj (.text)
-                  0033cbe4    0000007d                             : Flash28_Compact_Pulse.obj (.text)
-                  0033cc61    0000005a                             : Flash28_EraseSector.obj (.text)
-                  0033ccbb    00000053                             : Flash28_CompactSector.obj (.text)
-                  0033cd0e    00000041                             : Flash28_ClearLoop.obj (.text)
-                  0033cd4f    00000033                             : Flash28_ClearSector.obj (.text)
-                  0033cd82    00000029                             : Flash28_Init.obj (.text)
-                  0033cdab    00000014                             : Flash28_Utils.obj (.text)
-                  0033cdbf    0000000d                             : Flash28_Delay.obj (.text)
-                  0033cdcc    00000007                             : Flash28_DisInt.obj (.text)
-                  0033cdd3    000001b4     CO_LSSslave.obj (ramfuncs)
-                  0033cf87    000000c8     CO_SDOserver.obj (ramfuncs)
-                  0033d04f    00000027     bootloader.obj (ramfuncs)
-                  0033d076    00000020     CO_NMT_Heartbeat.obj (ramfuncs)
+ramfuncs   0    0033c918    000007c2     RUN ADDR = 00008000
+                  0033c918    00000020     Flash28335_API_V210.lib : Flash28_Erase.obj (.econst:_Sector$1)
+                  0033c938    00000008                             : Flash28_Erase.obj (.econst:_SecKey$2)
+                  0033c940    000000aa                             : Flash28_Prog.obj (.text)
+                  0033c9ea    000000a0                             : Flash28_Erase.obj (.text)
+                  0033ca8a    0000009a                             : Flash28_Erase_Pulse.obj (.text)
+                  0033cb24    00000084                             : Flash28_Internals.obj (.text)
+                  0033cba8    00000080                             : Flash28_Prog_Pulse.obj (.text)
+                  0033cc28    0000007d                             : Flash28_Compact_Pulse.obj (.text)
+                  0033cca5    0000005a                             : Flash28_EraseSector.obj (.text)
+                  0033ccff    00000053                             : Flash28_CompactSector.obj (.text)
+                  0033cd52    00000041                             : Flash28_ClearLoop.obj (.text)
+                  0033cd93    00000033                             : Flash28_ClearSector.obj (.text)
+                  0033cdc6    00000029                             : Flash28_Init.obj (.text)
+                  0033cdef    00000014                             : Flash28_Utils.obj (.text)
+                  0033ce03    0000000d                             : Flash28_Delay.obj (.text)
+                  0033ce10    00000007                             : Flash28_DisInt.obj (.text)
+                  0033ce17    000001b4     CO_LSSslave.obj (ramfuncs)
+                  0033cfcb    000000c8     CO_SDOserver.obj (ramfuncs)
+                  0033d093    00000027     bootloader.obj (ramfuncs)
+                  0033d0ba    00000020     CO_NMT_Heartbeat.obj (ramfuncs)
 
 .ebss      1    00000002    000005a6     UNINITIALIZED
                   00000002    0000002c     OD.obj (.ebss)
@@ -253,9 +252,8 @@ ramfuncs   0    0033c8d4    000007c2     RUN ADDR = 00008000
                   000003ee    00000002                       : _lock.c.obj (.ebss:__unlock)
                   000003f0    00000001                       : defs.c.obj (.ebss)
                   000003f1    00000001                       : errno.c.obj (.ebss)
-                  000003f2    00000001                       : fopen.c.obj (.ebss)
-                  000003f3    00000001                       : open.c.obj (.ebss)
-                  000003f4    0000000c     --HOLE--
+                  000003f2    00000001                       : open.c.obj (.ebss)
+                  000003f3    0000000d     --HOLE--
                   00000400    00000078                       : defs.c.obj (.ebss:__ftable)
                   00000478    00000008     --HOLE--
                   00000480    00000068     OD.obj (.ebss:_ODList)
@@ -534,12 +532,12 @@ MODULE SUMMARY
     +--+---------------------------------+-------+------------------+--------------------+
        Total:                            0       0                  2423              
                                                                                       
-    /home/thomas/data/projects/side-quests/locked-c2000-f28335/ti-cgt-c2000_22.6.0.LTS/lib/rts2800_fpu32.lib
-       _printfi.c.obj                    3269    66                 0                 
+    /home/thomas/data/projects/side-quests/locked-f28335-mcu/home/ti-ccs/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/lib/rts2800_fpu32.lib
+       _printfi.c.obj                    3263    66                 0                 
        memory.c.obj                      652     4                  4                 
        trgmsg.c.obj                      149     0                  288               
-       defs.c.obj                        0       42                 281               
-       fopen.c.obj                       289     4                  1                 
+       defs.c.obj                        0       126                281               
+       fopen.c.obj                       364     0                  0                 
        ll_div28.asm.obj                  263     0                  0                 
        ctype.c.obj                       0       257                0                 
        s_scalbn.c.obj                    169     28                 0                 
@@ -557,7 +555,7 @@ MODULE SUMMARY
        hostlseek.c.obj                   91      0                  0                 
        boot28.asm.obj                    86      0                  0                 
        fputc.c.obj                       83      0                  0                 
-       getdevice.c.obj                   81      0                  0                 
+       getdevice.c.obj                   78      0                  0                 
        hostopen.c.obj                    56      0                  8                 
        hostrename.c.obj                  62      0                  0                 
        exit.c.obj                        41      14                 6                 
@@ -577,10 +575,10 @@ MODULE SUMMARY
        i_div28.asm.obj                   34      0                  0                 
        fd_toi28.asm.obj                  33      0                  0                 
        memmov.c.obj                      33      0                  0                 
+       memcpy.c.obj                      32      0                  0                 
        fd_tol28.asm.obj                  31      0                  0                 
        ll_cmp28.asm.obj                  30      0                  0                 
        i_tofd28.asm.obj                  29      0                  0                 
-       memcpy.c.obj                      29      0                  0                 
        fs_tofdfpu32.asm.obj              28      0                  0                 
        l_tofd28.asm.obj                  28      0                  0                 
        unlink.c.obj                      25      0                  0                 
@@ -605,9 +603,9 @@ MODULE SUMMARY
        pre_init.c.obj                    2       0                  0                 
        startup.c.obj                     1       0                  0                 
     +--+---------------------------------+-------+------------------+--------------------+
-       Total:                            7649    484                706               
+       Total:                            7718    564                705               
                                                                                       
-    /home/thomas/workspace_ccstheia/CANopenNode_bootloader/port/flash_api/28335/v210/lib/Flash28335_API_V210.lib
+    /home/thomas/data/projects/side-quests/locked-f28335-mcu/home/ti-ccs/workspace_ccstheia/CANopenNode_bootloader/port/flash_api/28335/v210/lib/Flash28335_API_V210.lib
        Flash28_Erase.obj                 320     80                 0                 
        Flash28_Prog.obj                  340     0                  0                 
        Flash28_Erase_Pulse.obj           308     0                  0                 
@@ -629,7 +627,7 @@ MODULE SUMMARY
        Heap:                             0       0                  4096              
        Stack:                            0       0                  4096              
     +--+---------------------------------+-------+------------------+--------------------+
-       Grand Total:                      22537   1284               12289             
+       Grand Total:                      22606   1364               12288             
 
 
 GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
@@ -795,9 +793,9 @@ address     data page           name
 
 0000a000     280 (0000a000)     __stack
 
-0033d096    cf42 (0033d080)     __ctypes_
+0033d0da    cf43 (0033d0c0)     __ctypes_
 
-0033d3cc    cf4f (0033d3c0)     _crc_config
+0033d410    cf50 (0033d400)     _crc_config
 
 0033fff8    cfff (0033ffc0)     _CsmPwl
 
@@ -810,73 +808,73 @@ page  address   name
 ----  -------   ----                                    
 1     00000002  .data                                   
 0     00338000  .text                                   
-0     0033c5fd  C$$EXIT                                 
-0     0033be01  C$$IO$$                                 
-0     0033bd12  FD$$ADD                                 
-0     0033c5a9  FD$$CMP                                 
-0     0033be43  FD$$DIV                                 
-0     0033bece  FD$$MPY                                 
-0     0033c89f  FD$$NEG                                 
-0     0033c865  FD$$SUB                                 
-0     0033c6db  FD$$TOI                                 
-0     0033c71d  FD$$TOL                                 
-0     0033c794  FS$$TOFD                                
-0     0033c6b9  I$$DIV                                  
-0     0033c6ca  I$$MOD                                  
-0     0033c75a  I$$TOFD                                 
-0     0033c5d3  L$$DIV                                  
-0     0033c5e2  L$$MOD                                  
-0     0033c7b0  L$$TOFD                                 
-0     0033c7fe  LL$$AND                                 
-0     0033c73c  LL$$CMP                                 
-0     0033b9ea  LL$$DIV                                 
-0     0033ba26  LL$$MOD                                 
-0     0033c806  LL$$OR                                  
-0     0033c80e  LL$$XOR                                 
-0     0033c5f0  UL$$DIV                                 
-0     0033c5f7  UL$$MOD                                 
-0     0033c74e  ULL$$CMP                                
-0     0033ba60  ULL$$DIV                                
-0     0033ba8f  ULL$$MOD                                
+0     0033c640  C$$EXIT                                 
+0     0033be47  C$$IO$$                                 
+0     0033bd57  FD$$ADD                                 
+0     0033c5ec  FD$$CMP                                 
+0     0033be89  FD$$DIV                                 
+0     0033bf14  FD$$MPY                                 
+0     0033c8e5  FD$$NEG                                 
+0     0033c8ab  FD$$SUB                                 
+0     0033c71e  FD$$TOI                                 
+0     0033c780  FD$$TOL                                 
+0     0033c7da  FS$$TOFD                                
+0     0033c6fc  I$$DIV                                  
+0     0033c70d  I$$MOD                                  
+0     0033c7bd  I$$TOFD                                 
+0     0033c616  L$$DIV                                  
+0     0033c625  L$$MOD                                  
+0     0033c7f6  L$$TOFD                                 
+0     0033c844  LL$$AND                                 
+0     0033c79f  LL$$CMP                                 
+0     0033ba2f  LL$$DIV                                 
+0     0033ba6b  LL$$MOD                                 
+0     0033c84c  LL$$OR                                  
+0     0033c854  LL$$XOR                                 
+0     0033c633  UL$$DIV                                 
+0     0033c63a  UL$$MOD                                 
+0     0033c7b1  ULL$$CMP                                
+0     0033baa5  ULL$$DIV                                
+0     0033bad4  ULL$$MOD                                
 1     00000b00  _AdcMirror                              
 1     00007100  _AdcRegs                                
-0     00339c8f  _BitRateIsSupported                     
-0     0033a039  _CO_CANclearPendingSyncPDOs             
-0     0033a763  _CO_CANinit                             
-0     00339e88  _CO_CANmodule_disable                   
-0     00339cf9  _CO_CANmodule_init                      
-0     0033a08b  _CO_CANmodule_process                   
-0     0033a7a9  _CO_CANopenInit                         
-0     0033a852  _CO_CANopenInitPDO                      
-0     0033a0f0  _CO_CANpacket_process                   
-0     00339eab  _CO_CANrxBufferInit                     
-0     00339f7c  _CO_CANsend                             
-0     00339cab  _CO_CANsetConfigurationMode             
-0     00339cd1  _CO_CANsetNormalMode                    
-0     00339f4e  _CO_CANtxBufferInit                     
-0     0033a38c  _CO_EM_init                             
-0     0033a461  _CO_EM_process                          
-0     0033b8d3  _CO_LEDs_init                           
-0     0033b8e0  _CO_LEDs_process                        
-0     0033a786  _CO_LSSinit                             
-0     0033abf9  _CO_LSSslave_init                       
-0     0033ac75  _CO_LSSslave_initActivateBitRateCallback
-0     0033ac86  _CO_LSSslave_initCfgStoreCallback       
-0     0033ac64  _CO_LSSslave_initCheckBitRateCallback   
-0     0033ac97  _CO_LSSslave_process                    
-0     0033b43d  _CO_NMT_init                            
-0     0033b4e5  _CO_NMT_process                         
-0     0033abc2  _CO_Prog_F28335_init                    
-0     0033c0bd  _CO_Prog_init                           
+0     00339c89  _BitRateIsSupported                     
+0     0033a033  _CO_CANclearPendingSyncPDOs             
+0     0033a75d  _CO_CANinit                             
+0     00339e82  _CO_CANmodule_disable                   
+0     00339cf3  _CO_CANmodule_init                      
+0     0033a085  _CO_CANmodule_process                   
+0     0033a7a3  _CO_CANopenInit                         
+0     0033a84c  _CO_CANopenInitPDO                      
+0     0033a0ea  _CO_CANpacket_process                   
+0     00339ea5  _CO_CANrxBufferInit                     
+0     00339f76  _CO_CANsend                             
+0     00339ca5  _CO_CANsetConfigurationMode             
+0     00339ccb  _CO_CANsetNormalMode                    
+0     00339f48  _CO_CANtxBufferInit                     
+0     0033a386  _CO_EM_init                             
+0     0033a45b  _CO_EM_process                          
+0     0033b918  _CO_LEDs_init                           
+0     0033b925  _CO_LEDs_process                        
+0     0033a780  _CO_LSSinit                             
+0     0033abf3  _CO_LSSslave_init                       
+0     0033ac6f  _CO_LSSslave_initActivateBitRateCallback
+0     0033ac80  _CO_LSSslave_initCfgStoreCallback       
+0     0033ac5e  _CO_LSSslave_initCheckBitRateCallback   
+0     0033ac91  _CO_LSSslave_process                    
+0     0033b437  _CO_NMT_init                            
+0     0033b4df  _CO_NMT_process                         
+0     0033abbc  _CO_Prog_F28335_init                    
+0     0033c103  _CO_Prog_init                           
 0     003381df  _CO_SDOserver_init                      
 0     00338564  _CO_SDOserver_process                   
-0     0033a71f  _CO_delete                              
-0     0033a5a1  _CO_error                               
-0     0033a75b  _CO_isLSSslaveEnabled                   
-0     0033a664  _CO_new                                 
-0     0033a86c  _CO_process                             
-0     0033aa1c  _CheckAppAndJump                        
-0     0033a9ed  _CheckAppCrc                            
+0     0033a719  _CO_delete                              
+0     0033a59b  _CO_error                               
+0     0033a755  _CO_isLSSslaveEnabled                   
+0     0033a65e  _CO_new                                 
+0     0033a866  _CO_process                             
+0     0033aa16  _CheckAppAndJump                        
+0     0033a9e7  _CheckAppCrc                            
 1     00000c00  _CpuTimer0Regs                          
 1     00000c08  _CpuTimer1Regs                          
 1     00000c10  _CpuTimer2Regs                          
@@ -939,33 +937,33 @@ page  address   name
 1     00006f80  _GpioCtrlRegs                           
 1     00006fc0  _GpioDataRegs                           
 1     00006fe0  _GpioIntRegs                            
-0     0033c626  _HOSTclose                              
-0     0033c1e2  _HOSTlseek                              
-0     0033c40c  _HOSTopen                               
-0     0033c47b  _HOSTread                               
-0     0033c391  _HOSTrename                             
-0     0033c671  _HOSTunlink                             
-0     0033c444  _HOSTwrite                              
+0     0033c669  _HOSTclose                              
+0     0033c228  _HOSTlseek                              
+0     0033c44f  _HOSTopen                               
+0     0033c4be  _HOSTread                               
+0     0033c3d4  _HOSTrename                             
+0     0033c6b4  _HOSTunlink                             
+0     0033c487  _HOSTwrite                              
 1     00007900  _I2caRegs                               
 1     00005000  _McbspaRegs                             
 1     00005040  _McbspbRegs                             
 1     00000002  _OD                                     
 1     00000018  _OD_PERSIST_COMM                        
 1     00000008  _OD_RAM                                 
-0     0033b1f4  _OD_find                                
-0     0033b372  _OD_getPtr                              
-0     0033b30e  _OD_getSDOabCode                        
-0     0033b231  _OD_getSub                              
-0     0033b322  _OD_get_value                           
-0     0033b13f  _OD_readOriginal                        
-0     0033b34c  _OD_set_value                           
-0     0033b190  _OD_writeOriginal                       
+0     0033b1ee  _OD_find                                
+0     0033b36c  _OD_getPtr                              
+0     0033b308  _OD_getSDOabCode                        
+0     0033b22b  _OD_getSub                              
+0     0033b31c  _OD_get_value                           
+0     0033b139  _OD_readOriginal                        
+0     0033b346  _OD_set_value                           
+0     0033b18a  _OD_writeOriginal                       
 1     00380090  _PartIdRegs                             
 1     00000ce0  _PieCtrlRegs                            
 0     00000d00  _PieVectTable                           
-0     0033d096  _RamfuncsLoadEnd                        
+0     0033d0da  _RamfuncsLoadEnd                        
 abs   000007c2  _RamfuncsLoadSize                       
-0     0033c8d4  _RamfuncsLoadStart                      
+0     0033c918  _RamfuncsLoadStart                      
 0     00008000  _RamfuncsRunStart                       
 1     00007050  _SciaRegs                               
 1     00007750  _ScibRegs                               
@@ -978,112 +976,113 @@ abs   000007c2  _RamfuncsLoadSize
 1     0000b000  __STACK_END                             
 abs   00001000  __STACK_SIZE                            
 abs   00001000  __SYSMEM_SIZE                           
-0     0033b851  ___TI_cleanup                           
+0     0033b84b  ___TI_cleanup                           
 1     000003e2  ___TI_cleanup_ptr                       
-0     0033c185  ___TI_closefile                         
-0     0033bfcd  ___TI_doflush                           
+0     0033c1cb  ___TI_closefile                         
+0     0033c013  ___TI_doflush                           
 1     000003e4  ___TI_dtors_ptr                         
 1     000003e0  ___TI_enable_exit_profile_output        
 1     000003f0  ___TI_ft_end                            
-0     0033b13d  ___TI_heap_check                        
-0     0033b120  ___TI_heap_largest_available            
-0     0033b103  ___TI_heap_total_available              
-0     0033c579  ___TI_ltoa                              
+0     0033b137  ___TI_heap_check                        
+0     0033b11a  ___TI_heap_largest_available            
+0     0033b0fd  ___TI_heap_total_available              
+0     0033c5bc  ___TI_ltoa                              
 abs   ffffffff  ___TI_pprof_out_hndl                    
-0     00339b0a  ___TI_printfi                           
+0     00339b04  ___TI_printfi                           
 abs   ffffffff  ___TI_prof_data_size                    
 abs   ffffffff  ___TI_prof_data_start                   
-0     0033c15a  ___TI_rd_ok                             
-0     0033be06  ___TI_readmsg                           
+0     0033c1a0  ___TI_rd_ok                             
+0     0033be4c  ___TI_readmsg                           
 1     00000340  ___TI_tmpnams                           
-0     0033bdae  ___TI_writemsg                          
-0     0033c120  ___TI_wrt_ok                            
+0     0033bdf4  ___TI_writemsg                          
+0     0033c166  ___TI_wrt_ok                            
 abs   ffffffff  ___binit__                              
 abs   ffffffff  ___c_args__                             
-0     0033d3f6  ___cinit__                              
+0     0033d43a  ___cinit__                              
 1     00000002  ___data__                               
 1     00000002  ___edata__                              
-0     0033c8d3  ___etext__                              
+0     0033c918  ___etext__                              
 abs   ffffffff  ___pinit__                              
 0     00338000  ___text__                               
-0     0033c843  __args_main                             
-0     0033d096  __ctypes_                               
+0     0033c889  __args_main                             
+0     0033d0da  __ctypes_                               
 1     00000500  __device                                
 1     00000400  __ftable                                
 1     0000003e  __lock                                  
-0     0033c89e  __nop                                   
-0     0033c89a  __register_lock                         
-0     0033c896  __register_unlock                       
+0     0033c8e4  __nop                                   
+0     0033c8e0  __register_lock                         
+0     0033c8dc  __register_unlock                       
 1     0000a000  __stack                                 
 1     00000580  __stream                                
 1     00009000  __sys_memory                            
-0     0033c8d2  __system_post_cinit                     
-0     0033c8d0  __system_pre_init                       
+0     0033bdf3  __system_post_cinit                     
+0     0033c916  __system_pre_init                       
 1     000003ee  __unlock                                
-0     0033c5fd  _abort                                  
-0     0033b05d  _aligned_alloc                          
-0     0033c517  _atoi                                   
-0     0033c297  _c_int00                                
-0     0033b030  _calloc                                 
-0     0033c4e4  _close                                  
-0     0033c64d  _copy_in                                
-0     0033c695  _copysignl                              
-0     0033c4c3  _crc16_ccitt                            
-0     0033c4b1  _crc16_ccitt_single                     
-0     0033d3cc  _crc_config                             
+0     0033c640  _abort                                  
+0     0033b057  _aligned_alloc                          
+0     0033c55a  _atoi                                   
+0     0033c2dd  _c_int00                                
+0     0033b02a  _calloc                                 
+0     0033c527  _close                                  
+0     0033c690  _copy_in                                
+0     0033c6d8  _copysignl                              
+0     0033c506  _crc16_ccitt                            
+0     0033c4f4  _crc16_ccitt_single                     
+0     0033d410  _crc_config                             
 1     00000040  _crc_table                              
 1     000003f1  _errno                                  
-0     0033c5ff  _exit                                   
-0     0033c1c9  _fclose                                 
-0     0033bffc  _fflush                                 
-0     0033baf1  _find_config                            
-0     0033c340  _finddevice                             
-0     0033b88c  _fopen                                  
-0     0033c54e  _fprintf                                
-0     0033c2ed  _fputc                                  
-0     0033bc6a  _fputs                                  
-0     0033aede  _free                                   
-0     0033b86e  _freopen                                
-0     0033c23d  _frexpl                                 
-0     0033c3cf  _fseek                                  
-0     0033c3cf  _fseeko                                 
-0     0033bb75  _gen_crc                                
-0     0033bb38  _generate_crc_table                     
-0     0033bb1d  _generate_mask                          
-0     0033c35b  _getdevice                              
-0     0033bbc1  _ldexpl                                 
-0     0033c816  _lseek                                  
-0     0033b5ff  _main                                   
-0     0033aeb3  _malloc                                 
-0     0033b05d  _memalign                               
-0     0033c855  _memccpy                                
-0     0033c873  _memchr                                 
-0     0033c777  _memcpy                                 
-0     0033c6fc  _memmove                                
-0     0033c8c1  _memset                                 
-0     0033b02c  _minit                                  
-0     0033c040  _open                                   
+0     0033c642  _exit                                   
+0     0033c20f  _fclose                                 
+0     0033b901  _fdopen                                 
+0     0033c042  _fflush                                 
+0     0033bb36  _find_config                            
+0     0033c386  _finddevice                             
+0     0033b8a9  _fopen                                  
+0     0033c591  _fprintf                                
+0     0033c333  _fputc                                  
+0     0033bcaf  _fputs                                  
+0     0033aed8  _free                                   
+0     0033b868  _freopen                                
+0     0033c283  _frexpl                                 
+0     0033c412  _fseek                                  
+0     0033c412  _fseeko                                 
+0     0033bbba  _gen_crc                                
+0     0033bb7d  _generate_crc_table                     
+0     0033bb62  _generate_mask                          
+0     0033c3a1  _getdevice                              
+0     0033bc06  _ldexpl                                 
+0     0033c85c  _lseek                                  
+0     0033b5f9  _main                                   
+0     0033aead  _malloc                                 
+0     0033b057  _memalign                               
+0     0033c89b  _memccpy                                
+0     0033c8b9  _memchr                                 
+0     0033c760  _memcpy                                 
+0     0033c73f  _memmove                                
+0     0033c907  _memset                                 
+0     0033b026  _minit                                  
+0     0033c086  _open                                   
 1     0000002e  _parmbuf                                
-0     0033c2ed  _putc                                   
-0     0033c33b  _putchar                                
-0     0033bcff  _puts                                   
-0     0033afa8  _realloc                                
-0     0033c8cd  _remove                                 
-0     0033bbc1  _scalbnl                                
-0     0033bf51  _setvbuf                                
-0     0033c880  _strchr                                 
-0     0033c88c  _strcmp                                 
-0     0033c8c8  _strcpy                                 
-0     0033c8b9  _strlen                                 
-0     0033c82e  _strncpy                                
-0     0033c7cc  _unlink                                 
-0     0033c8a8  _wcslen                                 
-0     0033c7e5  _write                                  
+0     0033c333  _putc                                   
+0     0033c381  _putchar                                
+0     0033bd44  _puts                                   
+0     0033afa2  _realloc                                
+0     0033c913  _remove                                 
+0     0033bc06  _scalbnl                                
+0     0033bf97  _setvbuf                                
+0     0033c8c6  _strchr                                 
+0     0033c8d2  _strcmp                                 
+0     0033c90e  _strcpy                                 
+0     0033c8ff  _strlen                                 
+0     0033c874  _strncpy                                
+0     0033c812  _unlink                                 
+0     0033c8ee  _wcslen                                 
+0     0033c82b  _write                                  
 abs   ffffffff  binit                                   
 0     0033fff6  boot_code_start                         
-0     0033d3f6  cinit                                   
+0     0033d43a  cinit                                   
 1     00000002  edata                                   
-0     0033c8d3  etext                                   
+0     0033c918  etext                                   
 abs   ffffffff  pinit                                   
 
 
@@ -1122,165 +1121,166 @@ page  address   name
 0     00338000  ___text__                               
 0     003381df  _CO_SDOserver_init                      
 0     00338564  _CO_SDOserver_process                   
-0     00339b0a  ___TI_printfi                           
-0     00339c8f  _BitRateIsSupported                     
-0     00339cab  _CO_CANsetConfigurationMode             
-0     00339cd1  _CO_CANsetNormalMode                    
-0     00339cf9  _CO_CANmodule_init                      
-0     00339e88  _CO_CANmodule_disable                   
-0     00339eab  _CO_CANrxBufferInit                     
-0     00339f4e  _CO_CANtxBufferInit                     
-0     00339f7c  _CO_CANsend                             
-0     0033a039  _CO_CANclearPendingSyncPDOs             
-0     0033a08b  _CO_CANmodule_process                   
-0     0033a0f0  _CO_CANpacket_process                   
-0     0033a38c  _CO_EM_init                             
-0     0033a461  _CO_EM_process                          
-0     0033a5a1  _CO_error                               
-0     0033a664  _CO_new                                 
-0     0033a71f  _CO_delete                              
-0     0033a75b  _CO_isLSSslaveEnabled                   
-0     0033a763  _CO_CANinit                             
-0     0033a786  _CO_LSSinit                             
-0     0033a7a9  _CO_CANopenInit                         
-0     0033a852  _CO_CANopenInitPDO                      
-0     0033a86c  _CO_process                             
-0     0033a9ed  _CheckAppCrc                            
-0     0033aa1c  _CheckAppAndJump                        
-0     0033abc2  _CO_Prog_F28335_init                    
-0     0033abf9  _CO_LSSslave_init                       
-0     0033ac64  _CO_LSSslave_initCheckBitRateCallback   
-0     0033ac75  _CO_LSSslave_initActivateBitRateCallback
-0     0033ac86  _CO_LSSslave_initCfgStoreCallback       
-0     0033ac97  _CO_LSSslave_process                    
-0     0033aeb3  _malloc                                 
-0     0033aede  _free                                   
-0     0033afa8  _realloc                                
-0     0033b02c  _minit                                  
-0     0033b030  _calloc                                 
-0     0033b05d  _aligned_alloc                          
-0     0033b05d  _memalign                               
-0     0033b103  ___TI_heap_total_available              
-0     0033b120  ___TI_heap_largest_available            
-0     0033b13d  ___TI_heap_check                        
-0     0033b13f  _OD_readOriginal                        
-0     0033b190  _OD_writeOriginal                       
-0     0033b1f4  _OD_find                                
-0     0033b231  _OD_getSub                              
-0     0033b30e  _OD_getSDOabCode                        
-0     0033b322  _OD_get_value                           
-0     0033b34c  _OD_set_value                           
-0     0033b372  _OD_getPtr                              
-0     0033b43d  _CO_NMT_init                            
-0     0033b4e5  _CO_NMT_process                         
-0     0033b5ff  _main                                   
-0     0033b851  ___TI_cleanup                           
-0     0033b86e  _freopen                                
-0     0033b88c  _fopen                                  
-0     0033b8d3  _CO_LEDs_init                           
-0     0033b8e0  _CO_LEDs_process                        
-0     0033b9ea  LL$$DIV                                 
-0     0033ba26  LL$$MOD                                 
-0     0033ba60  ULL$$DIV                                
-0     0033ba8f  ULL$$MOD                                
-0     0033baf1  _find_config                            
-0     0033bb1d  _generate_mask                          
-0     0033bb38  _generate_crc_table                     
-0     0033bb75  _gen_crc                                
-0     0033bbc1  _ldexpl                                 
-0     0033bbc1  _scalbnl                                
-0     0033bc6a  _fputs                                  
-0     0033bcff  _puts                                   
-0     0033bd12  FD$$ADD                                 
-0     0033bdae  ___TI_writemsg                          
-0     0033be01  C$$IO$$                                 
-0     0033be06  ___TI_readmsg                           
-0     0033be43  FD$$DIV                                 
-0     0033bece  FD$$MPY                                 
-0     0033bf51  _setvbuf                                
-0     0033bfcd  ___TI_doflush                           
-0     0033bffc  _fflush                                 
-0     0033c040  _open                                   
-0     0033c0bd  _CO_Prog_init                           
-0     0033c120  ___TI_wrt_ok                            
-0     0033c15a  ___TI_rd_ok                             
-0     0033c185  ___TI_closefile                         
-0     0033c1c9  _fclose                                 
-0     0033c1e2  _HOSTlseek                              
-0     0033c23d  _frexpl                                 
-0     0033c297  _c_int00                                
-0     0033c2ed  _fputc                                  
-0     0033c2ed  _putc                                   
-0     0033c33b  _putchar                                
-0     0033c340  _finddevice                             
-0     0033c35b  _getdevice                              
-0     0033c391  _HOSTrename                             
-0     0033c3cf  _fseek                                  
-0     0033c3cf  _fseeko                                 
-0     0033c40c  _HOSTopen                               
-0     0033c444  _HOSTwrite                              
-0     0033c47b  _HOSTread                               
-0     0033c4b1  _crc16_ccitt_single                     
-0     0033c4c3  _crc16_ccitt                            
-0     0033c4e4  _close                                  
-0     0033c517  _atoi                                   
-0     0033c54e  _fprintf                                
-0     0033c579  ___TI_ltoa                              
-0     0033c5a9  FD$$CMP                                 
-0     0033c5d3  L$$DIV                                  
-0     0033c5e2  L$$MOD                                  
-0     0033c5f0  UL$$DIV                                 
-0     0033c5f7  UL$$MOD                                 
-0     0033c5fd  C$$EXIT                                 
-0     0033c5fd  _abort                                  
-0     0033c5ff  _exit                                   
-0     0033c626  _HOSTclose                              
-0     0033c64d  _copy_in                                
-0     0033c671  _HOSTunlink                             
-0     0033c695  _copysignl                              
-0     0033c6b9  I$$DIV                                  
-0     0033c6ca  I$$MOD                                  
-0     0033c6db  FD$$TOI                                 
-0     0033c6fc  _memmove                                
-0     0033c71d  FD$$TOL                                 
-0     0033c73c  LL$$CMP                                 
-0     0033c74e  ULL$$CMP                                
-0     0033c75a  I$$TOFD                                 
-0     0033c777  _memcpy                                 
-0     0033c794  FS$$TOFD                                
-0     0033c7b0  L$$TOFD                                 
-0     0033c7cc  _unlink                                 
-0     0033c7e5  _write                                  
-0     0033c7fe  LL$$AND                                 
-0     0033c806  LL$$OR                                  
-0     0033c80e  LL$$XOR                                 
-0     0033c816  _lseek                                  
-0     0033c82e  _strncpy                                
-0     0033c843  __args_main                             
-0     0033c855  _memccpy                                
-0     0033c865  FD$$SUB                                 
-0     0033c873  _memchr                                 
-0     0033c880  _strchr                                 
-0     0033c88c  _strcmp                                 
-0     0033c896  __register_unlock                       
-0     0033c89a  __register_lock                         
-0     0033c89e  __nop                                   
-0     0033c89f  FD$$NEG                                 
-0     0033c8a8  _wcslen                                 
-0     0033c8b9  _strlen                                 
-0     0033c8c1  _memset                                 
-0     0033c8c8  _strcpy                                 
-0     0033c8cd  _remove                                 
-0     0033c8d0  __system_pre_init                       
-0     0033c8d2  __system_post_cinit                     
-0     0033c8d3  ___etext__                              
-0     0033c8d3  etext                                   
-0     0033c8d4  _RamfuncsLoadStart                      
-0     0033d096  _RamfuncsLoadEnd                        
-0     0033d096  __ctypes_                               
-0     0033d3cc  _crc_config                             
-0     0033d3f6  ___cinit__                              
-0     0033d3f6  cinit                                   
+0     00339b04  ___TI_printfi                           
+0     00339c89  _BitRateIsSupported                     
+0     00339ca5  _CO_CANsetConfigurationMode             
+0     00339ccb  _CO_CANsetNormalMode                    
+0     00339cf3  _CO_CANmodule_init                      
+0     00339e82  _CO_CANmodule_disable                   
+0     00339ea5  _CO_CANrxBufferInit                     
+0     00339f48  _CO_CANtxBufferInit                     
+0     00339f76  _CO_CANsend                             
+0     0033a033  _CO_CANclearPendingSyncPDOs             
+0     0033a085  _CO_CANmodule_process                   
+0     0033a0ea  _CO_CANpacket_process                   
+0     0033a386  _CO_EM_init                             
+0     0033a45b  _CO_EM_process                          
+0     0033a59b  _CO_error                               
+0     0033a65e  _CO_new                                 
+0     0033a719  _CO_delete                              
+0     0033a755  _CO_isLSSslaveEnabled                   
+0     0033a75d  _CO_CANinit                             
+0     0033a780  _CO_LSSinit                             
+0     0033a7a3  _CO_CANopenInit                         
+0     0033a84c  _CO_CANopenInitPDO                      
+0     0033a866  _CO_process                             
+0     0033a9e7  _CheckAppCrc                            
+0     0033aa16  _CheckAppAndJump                        
+0     0033abbc  _CO_Prog_F28335_init                    
+0     0033abf3  _CO_LSSslave_init                       
+0     0033ac5e  _CO_LSSslave_initCheckBitRateCallback   
+0     0033ac6f  _CO_LSSslave_initActivateBitRateCallback
+0     0033ac80  _CO_LSSslave_initCfgStoreCallback       
+0     0033ac91  _CO_LSSslave_process                    
+0     0033aead  _malloc                                 
+0     0033aed8  _free                                   
+0     0033afa2  _realloc                                
+0     0033b026  _minit                                  
+0     0033b02a  _calloc                                 
+0     0033b057  _aligned_alloc                          
+0     0033b057  _memalign                               
+0     0033b0fd  ___TI_heap_total_available              
+0     0033b11a  ___TI_heap_largest_available            
+0     0033b137  ___TI_heap_check                        
+0     0033b139  _OD_readOriginal                        
+0     0033b18a  _OD_writeOriginal                       
+0     0033b1ee  _OD_find                                
+0     0033b22b  _OD_getSub                              
+0     0033b308  _OD_getSDOabCode                        
+0     0033b31c  _OD_get_value                           
+0     0033b346  _OD_set_value                           
+0     0033b36c  _OD_getPtr                              
+0     0033b437  _CO_NMT_init                            
+0     0033b4df  _CO_NMT_process                         
+0     0033b5f9  _main                                   
+0     0033b84b  ___TI_cleanup                           
+0     0033b868  _freopen                                
+0     0033b8a9  _fopen                                  
+0     0033b901  _fdopen                                 
+0     0033b918  _CO_LEDs_init                           
+0     0033b925  _CO_LEDs_process                        
+0     0033ba2f  LL$$DIV                                 
+0     0033ba6b  LL$$MOD                                 
+0     0033baa5  ULL$$DIV                                
+0     0033bad4  ULL$$MOD                                
+0     0033bb36  _find_config                            
+0     0033bb62  _generate_mask                          
+0     0033bb7d  _generate_crc_table                     
+0     0033bbba  _gen_crc                                
+0     0033bc06  _ldexpl                                 
+0     0033bc06  _scalbnl                                
+0     0033bcaf  _fputs                                  
+0     0033bd44  _puts                                   
+0     0033bd57  FD$$ADD                                 
+0     0033bdf3  __system_post_cinit                     
+0     0033bdf4  ___TI_writemsg                          
+0     0033be47  C$$IO$$                                 
+0     0033be4c  ___TI_readmsg                           
+0     0033be89  FD$$DIV                                 
+0     0033bf14  FD$$MPY                                 
+0     0033bf97  _setvbuf                                
+0     0033c013  ___TI_doflush                           
+0     0033c042  _fflush                                 
+0     0033c086  _open                                   
+0     0033c103  _CO_Prog_init                           
+0     0033c166  ___TI_wrt_ok                            
+0     0033c1a0  ___TI_rd_ok                             
+0     0033c1cb  ___TI_closefile                         
+0     0033c20f  _fclose                                 
+0     0033c228  _HOSTlseek                              
+0     0033c283  _frexpl                                 
+0     0033c2dd  _c_int00                                
+0     0033c333  _fputc                                  
+0     0033c333  _putc                                   
+0     0033c381  _putchar                                
+0     0033c386  _finddevice                             
+0     0033c3a1  _getdevice                              
+0     0033c3d4  _HOSTrename                             
+0     0033c412  _fseek                                  
+0     0033c412  _fseeko                                 
+0     0033c44f  _HOSTopen                               
+0     0033c487  _HOSTwrite                              
+0     0033c4be  _HOSTread                               
+0     0033c4f4  _crc16_ccitt_single                     
+0     0033c506  _crc16_ccitt                            
+0     0033c527  _close                                  
+0     0033c55a  _atoi                                   
+0     0033c591  _fprintf                                
+0     0033c5bc  ___TI_ltoa                              
+0     0033c5ec  FD$$CMP                                 
+0     0033c616  L$$DIV                                  
+0     0033c625  L$$MOD                                  
+0     0033c633  UL$$DIV                                 
+0     0033c63a  UL$$MOD                                 
+0     0033c640  C$$EXIT                                 
+0     0033c640  _abort                                  
+0     0033c642  _exit                                   
+0     0033c669  _HOSTclose                              
+0     0033c690  _copy_in                                
+0     0033c6b4  _HOSTunlink                             
+0     0033c6d8  _copysignl                              
+0     0033c6fc  I$$DIV                                  
+0     0033c70d  I$$MOD                                  
+0     0033c71e  FD$$TOI                                 
+0     0033c73f  _memmove                                
+0     0033c760  _memcpy                                 
+0     0033c780  FD$$TOL                                 
+0     0033c79f  LL$$CMP                                 
+0     0033c7b1  ULL$$CMP                                
+0     0033c7bd  I$$TOFD                                 
+0     0033c7da  FS$$TOFD                                
+0     0033c7f6  L$$TOFD                                 
+0     0033c812  _unlink                                 
+0     0033c82b  _write                                  
+0     0033c844  LL$$AND                                 
+0     0033c84c  LL$$OR                                  
+0     0033c854  LL$$XOR                                 
+0     0033c85c  _lseek                                  
+0     0033c874  _strncpy                                
+0     0033c889  __args_main                             
+0     0033c89b  _memccpy                                
+0     0033c8ab  FD$$SUB                                 
+0     0033c8b9  _memchr                                 
+0     0033c8c6  _strchr                                 
+0     0033c8d2  _strcmp                                 
+0     0033c8dc  __register_unlock                       
+0     0033c8e0  __register_lock                         
+0     0033c8e4  __nop                                   
+0     0033c8e5  FD$$NEG                                 
+0     0033c8ee  _wcslen                                 
+0     0033c8ff  _strlen                                 
+0     0033c907  _memset                                 
+0     0033c90e  _strcpy                                 
+0     0033c913  _remove                                 
+0     0033c916  __system_pre_init                       
+0     0033c918  _RamfuncsLoadStart                      
+0     0033c918  ___etext__                              
+0     0033c918  etext                                   
+0     0033d0da  _RamfuncsLoadEnd                        
+0     0033d0da  __ctypes_                               
+0     0033d410  _crc_config                             
+0     0033d43a  ___cinit__                              
+0     0033d43a  cinit                                   
 0     0033fff6  boot_code_start                         
 1     00000002  .data                                   
 1     00000002  _OD                                     
@@ -1369,4 +1369,4 @@ abs   ffffffff  ___pinit__
 abs   ffffffff  binit                                   
 abs   ffffffff  pinit                                   
 
-[277 symbols]
+[278 symbols]

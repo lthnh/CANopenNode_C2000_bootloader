@@ -14,4 +14,7 @@
 	<templateProperties value="id=com.ti.common.project.core.emptyProjectTemplate"/>
 	<filesToOpen value=""/>
 	<isTargetManual value="true"/>
+	<origin value="/home/thomas/data/projects/side-quests/locked-f28335-mcu/CANopenNode_C2000_bootloader"/>
+	<activeTargetConfiguration value="targetConfigs/TMS320F28335.ccxml"/>
+	<isTargetConfigurationManual value="false"/>
 </projectOptions>
