@@ -19,7 +19,7 @@
 #include "autoconf.h"
 
 #if CONFIG_HAS_EEPROM
-#include "DSP2833x_Device.h"
+#include "F2806x_Device.h"
 #include "eeprom.h"
 
 void EEPROM_init(void)

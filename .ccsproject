@@ -15,6 +15,6 @@
 	<filesToOpen value=""/>
 	<isTargetManual value="true"/>
 	<origin value="/home/thomas/data/projects/side-quests/locked-f28335-mcu/CANopenNode_C2000_bootloader"/>
-	<activeTargetConfiguration value="targetConfigs/TMS320F28335.ccxml"/>
+	<activeTargetConfiguration value="targetConfigs/TMS320F28069.ccxml"/>
 	<isTargetConfigurationManual value="false"/>
 </projectOptions>

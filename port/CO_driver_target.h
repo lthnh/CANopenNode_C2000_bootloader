@@ -33,7 +33,6 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include <stdint.h>
-#include "DSP2833x_Device.h"
 #include "autoconf.h"
 
 #ifdef CO_DRIVER_CUSTOM

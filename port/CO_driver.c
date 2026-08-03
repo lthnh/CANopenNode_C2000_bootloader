@@ -27,6 +27,8 @@
 
 #include "autoconf.h"
 #include "301/CO_driver.h"
+#include "F2806x_Device.h"
+#include "F2806x_ECan.h"
 
 typedef struct {
     uint16_t bit_rate_kbps;
@@ -278,9 +280,6 @@ CO_ReturnError_t CO_CANmodule_init(
     if(ECanRegPtr == &ECanaRegs) {
         MBoxPtr = &(ECanaMboxes.MBOX0);
         LamPtr = &(ECanaLAMRegs.LAM0);
-    } else if(ECanRegPtr == &ECanbRegs) {
-        MBoxPtr = &(ECanbMboxes.MBOX0);
-        LamPtr = &(ECanbLAMRegs.LAM0);
     } else {
         return CO_ERROR_ILLEGAL_ARGUMENT;
     }
@@ -451,9 +450,6 @@ CO_ReturnError_t CO_CANrxBufferInit(
         if(ECanRegPtr == &ECanaRegs) {
             MBoxPtr = &(ECanaMboxes.MBOX0);
             LamPtr = &(ECanaLAMRegs.LAM0);
-        } else if(ECanRegPtr == &ECanbRegs) {
-            MBoxPtr = &(ECanbMboxes.MBOX0);
-            LamPtr = &(ECanbLAMRegs.LAM0);
         } else {
             return CO_ERROR_ILLEGAL_ARGUMENT;
         }
@@ -565,8 +561,6 @@ CO_ReturnError_t CO_CANsend(CO_CANmodule_t *CANmodule, CO_CANtx_t *buffer){
     ECanRegPtr = (volatile struct ECAN_REGS *)(CANmodule->CANptr);
     if(ECanRegPtr == &ECanaRegs) {
         MBoxPtr = &(ECanaMboxes.MBOX0);
-    } else if(ECanRegPtr == &ECanbRegs) {
-        MBoxPtr = &(ECanbMboxes.MBOX0);
     } else {
         return CO_ERROR_ILLEGAL_ARGUMENT;
     }
@@ -781,8 +775,6 @@ void CO_CANpacket_process(CO_CANmodule_t *CANmodule) {
     ECanRegPtr = (volatile struct ECAN_REGS *)(CANmodule->CANptr);
     if(ECanRegPtr == &ECanaRegs) {
         MBoxPtr = &(ECanaMboxes.MBOX0);
-    } else if(ECanRegPtr == &ECanbRegs) {
-        MBoxPtr = &(ECanbMboxes.MBOX0);
     } else {
         return;
     }

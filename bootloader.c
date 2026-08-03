@@ -17,11 +17,11 @@
  * limitations under the License.
  */
 #include "autoconf.h"
-#include "DSP2833x_Device.h"
+#include "F2806x_Device.h"
 #include "CANopen.h"
 #include "301/crc16-ccitt.h"
 #include "OD.h"
-#include "302/CO_Prog_F28335.h"
+#include "302/CO_Prog_F28069.h"
 #include "eeprom.h"
 
 #define BOOT_FLAG_VAL               *(volatile unsigned long *)CONFIG_BOOT_FLAG_ADDRESS
